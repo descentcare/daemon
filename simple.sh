@@ -4,8 +4,8 @@ echo "Starting..."
 
 exec 0</dev/null
 
-trap 'echo "Config reloading..."' SIGHUP
-trap 'echo "Finishing..."; exit' SIGTERM
+trap 'echo "Config reloading..."' HUP
+trap 'echo "Finishing..."; exit' TERM
 
 while [[ 1 = 1 ]]; do
 	pwd > /home/student117/newfile
